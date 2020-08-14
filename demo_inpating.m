@@ -17,9 +17,9 @@ X_org = I;
 [LH,LW,Ldim] = size(X_org);
 if Ldim >1
     X_yuv = rgb2ycbcr(X_org);
-    X_org = im2double(X_yuv(:,:,1));
+    X_org = double(X_yuv(:,:,1));
 else
-    X_org = im2double(X_org);
+    X_org = double(X_org);
 end
 
 %
